@@ -5,8 +5,322 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+
+        .wrapper {
+            display: inline-block;
+            border: 1px solid #000;
+            padding: 15px;
+            border-radius: 25px;
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <h1>Forms</h1>
+
+    <div class="wrapper">
+        <h3>A form with fields for text</h3>
+        <form action="">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname">
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <h3>A form with radio buttons:</h3>
+        <form action="">
+            <input type="radio" name="languages" id="html" value="HTML">
+            <label for="html">HTML</label>
+            <input type="radio" name="languages" id="css" value="CSS">
+            <label for="css">CSS</label>
+            <input type="radio" name="languages" id="js" value="JS">
+            <label for="js">JS</label>
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <h3>A form with checkboxes:</h3>
+        <form action="">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehiicle1">I have a bike</label>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehiicle2">I have a car</label>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehiicle3">I have a boat</label>
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <h2>HTML Form Attributes</h2>
+
+        <div>
+            <p>The <b>action</b> attribute defines the action to be performed when the form is submitted.
+            
+            Usually, the form data is sent to a file on the server when the user clicks on the submit button.</p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <h2>The Target Attribute</h2>
+        <div>
+            <p>The <b>target</b> attribute specifies where to display the response that is received after submitting the form.
+            The target attribute can have one of the following values:</p>
+        </div>
+
+        <table>
+            <tr>
+                <th>Value</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>_blank</td>
+                <td>The response is displayed in a new window or tab</td>
+            </tr>
+            <tr>
+                <td>_self</td>
+                <td>The response is displayed in the current window</td>
+            </tr>
+            <tr>
+                <td>_parent</td>
+                <td>The response is displayed in the parent frame</td>
+            </tr>
+            <tr>
+                <td>_top</td>
+                <td>The response is displayed in the full body of the window</td>
+            </tr>
+            <tr>
+                <td><i>framename</i></td>
+                <td>The response is displayed in a named iframe</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="wrapper">
+        <h2>The Method Attribute</h2>
+        <div>
+            <p>The <b>method</b> attribute specifies the HTTP method to be used when submitting the form data.
+            
+            The form-data can be sent as URL variables (with <b>method="get"</b>) or as HTTP post transaction (with method="post").
+            
+            The default HTTP method when submitting form data is GET.</p>
+        </div>
+        <div>
+            <p><code>form action="/action_page.php" method="get"</code></p>
+            <p><code>form action="/action_page.php" method="post"</code></p>
+        </div>
+
+        <div>
+            <h3>Notes on GET:</h3>
+            <ul>
+                <li>Appends the form data to the URL, in name/value pairs</li>
+                <li>NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)</li>
+                <li>The length of a URL is limited (2048 characters)</li>
+                <li>Useful for form submissions where a user wants to bookmark the result</li>
+                <li>GET is good for non-secure data, like query strings in Google</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Notes on GET:</h3>
+            <ul>
+                <li>Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)</li>
+                <li>POST has no size limitations, and can be used to send large amounts of data.</li>
+                <li>Form submissions with POST cannot be bookmarked</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <h2>Form submissions with POST cannot be bookmarked</h2>
+        <div>
+            <p>The <b>autocomplete</b> attribute specifies whether a form should have autocomplete on or off.
+            
+            When autocomplete is on, the browser automatically complete values based on values that the user has entered before.</p>
+        </div>
+
+        <div>
+            <p><code>form action="/action_page.php" autocomplete="on" form</code></p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <h3>The HTML <code>form</code> Elements</h3>
+        <div>The HTML <code>form</code> element can contain one or more of the following form elements:</div>
+        <ul>
+            <li><code>input</code></li>
+            <li><code>label</code></li>
+            <li><code>select</code></li>
+            <li><code>textarea</code></li>
+            <li><code>button</code></li>
+            <li><code>fieldset</code></li>
+            <li><code>legend</code></li>
+            <li><code>datalist</code></li>
+            <li><code>output</code></li>
+            <li><code>option</code></li>
+            <li><code>optgroup</code></li>
+        </ul>
+    </div>
+
+    <div class="wrapper">
+        <h3>The <code>input</code> Element</h3>
+        <div>
+            <p>One of the most used form element is the <code>input</code> element.
+            
+            The <code>input</code> element can be displayed in several ways, depending on the type attribute.</p>
+        </div>
+
+        <form action="">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <h2>The <code>select</code> Element</h2>
+        <div>
+            <p>The <code>select</code> element defines a drop-down list:</p>
+        </div>
+
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+            <option value="volvo" selected>Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+
+        <h5>Use the <code>size</code> attribute to specify the number of visible values:</h5>
+        <select name="cars" id="cars" size="3">
+            <option value="volvo" selected>Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+
+        <h5>Use the <code>multiple</code> attribute to allow the user to select more than one value:</h5>
+        <select name="cars" id="cars" size="3" multiple>
+            <option value="volvo" selected>Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+    </div>
+
+    <div class="wrapper">
+        <h2>The <code>fieldset</code> and <code>legend</code> Elements</h2>
+
+        <div>
+            <p>The <code>fieldset</code> element is used to group related data in a form.
+            The <code>legend</code> element defines a caption for the <code>fieldset</code> element.</p>
+        </div>
+
+        <form action="/action_page.php">
+            <fieldset>
+                <legend>Personalia:</legend>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <h2>The <code>datalist</code> Element</h2>
+
+        <div>
+            <p>The <code>datalist</code> element specifies a list of pre-defined options for an <code>input</code> element.
+            
+                Users will see a drop-down list of the pre-defined options as they input data.
+            
+                The list attribute of the <code>input</code> element, must refer to the id attribute of the <code>datalist</code> element.</p>
+        </div>
+
+        <form action="/action_page.php">
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <h2>Input Restrictions</h2>
+
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>checked</code></td>
+                <td>Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio")</td>
+            </tr>
+            <tr>
+                <td><code>disabled</code></td>
+                <td>Specifies that an input field should be disabled</td>
+            </tr>
+            <tr>
+                <td><code>max</code></td>
+                <td>Specifies the maximum value for an input field</td>
+            </tr>
+            <tr>
+                <td><code>maxlength</code></td>
+                <td>Specifies the maximum number of character for an input field</td>
+            </tr>
+            <tr>
+                <td><code>min</code></td>
+                <td>Specifies the minimum value for an input field</td>
+            </tr>
+            <tr>
+                <td><code>pattern</code></td>
+                <td>Specifies a regular expression to check the input value against</td>
+            </tr>
+            <tr>
+                <td><code>readonly</code></td>
+                <td>Specifies that an input field is read only (cannot be changed)</td>
+            </tr>
+            <tr>
+                <td><code>required</code></td>
+                <td>Specifies that an input field is required (must be filled out)</td>
+            </tr>
+            <tr>
+                <td><code>size</code></td>
+                <td>Specifies the width (in characters) of an input field</td>
+            </tr>
+            <tr>
+                <td><code>step</code></td>
+                <td>Specifies the legal number intervals for an input field</td>
+            </tr>
+            <tr>
+                <td><code>value</code></td>
+                <td>Specifies the default value for an input field</td>
+            </tr>
+        </table>
+    </div>
+
+
 </body>
 </html>
