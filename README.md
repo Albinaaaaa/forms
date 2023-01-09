@@ -2,5 +2,5 @@
 
 HTML Forms
 
-goos site for learning:
+good site for learning:
 https://www.w3schools.com/html/html_forms.asp
